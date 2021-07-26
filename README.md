@@ -2,6 +2,21 @@
 
 A brief overview of the workflow file used in this repo
 
+```
+name: A workflow for my Hello World file
+on: push
+
+jobs:
+  build:
+    name: Hello world action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./action-a
+        with:
+          MY_NAME: "Mona"
+```
+
 **name:** A workflow for my Hello World file gives your workflow a name. This name appears on any pull request or in the Actions tab. The name is especially useful when there are multiple workflows in your repository.
 
 **on:** push indicates that your workflow will execute anytime code is pushed to your repository, using the push event.
@@ -22,17 +37,4 @@ A brief overview of the workflow file used in this repo
 
 **with:** is used to specify the input variables that will be available to your action in the runtime environment. In this case, the input variable is MY_NAME, and it is currently initialized to "Mona".
 
-```
-name: A workflow for my Hello World file
-on: push
 
-jobs:
-  build:
-    name: Hello world action
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: ./action-a
-        with:
-          MY_NAME: "Mona"
-```
