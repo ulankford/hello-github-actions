@@ -17,6 +17,8 @@ jobs:
           MY_NAME: "Mona"
 ```
 
+A breakdown in the key terms used in this workflow
+
 **name:** A workflow for my Hello World file gives your workflow a name. This name appears on any pull request or in the Actions tab. The name is especially useful when there are multiple workflows in your repository.
 
 **on:** push indicates that your workflow will execute anytime code is pushed to your repository, using the push event.
@@ -37,4 +39,6 @@ jobs:
 
 **with:** is used to specify the input variables that will be available to your action in the runtime environment. In this case, the input variable is MY_NAME, and it is currently initialized to "Mona".
 
+Below is the output of the workflow after it is triggered, in this case via a push to the repo
 
+![action-image](images/image1.png)
